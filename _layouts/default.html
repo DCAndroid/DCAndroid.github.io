@@ -5,12 +5,11 @@
 
   <body>
 
-    {% include header.html %}
+    {% include meetup_cards.html %}
+    {% include navbar.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="container">
+      {{ content }}
     </div>
 
     {% include footer.html %}

@@ -204,3 +204,11 @@ pre {
         }
     }
 }
+
+.navbar {
+    background-color: $brand-color;
+}
+
+.navbar-default .navbar-brand {
+    color: $white-color;
+}
