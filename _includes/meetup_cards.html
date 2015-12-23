@@ -67,7 +67,12 @@ window.onload = function(){
 
     var EventPresenter = function(event) {
       var formatVenueLink = function(venue) {
-        var formattedVenue = "http://maps.google.com/?q=" + encodeURI(venue.address_1) + '+' + encodeURI(venue.city);
+        var formattedVenue = "http://maps.google.com/?q=";
+        if (typeof venue !== 'undefined') {
+          formattedVenue += encodeURI(venue.address_1) + '+' + encodeURI(venue.city);
+        } else {
+          formattedVenue += "Washington, D.C.";
+        }
         return formattedVenue
       };
       var formatDate = function(date) {
